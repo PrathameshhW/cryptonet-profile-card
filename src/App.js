@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import Loader from "./Loader";
+import Loader from "./components/Loader";
 
 export function App() {
   const API_URL = "https://randomuser.me/api/?page=1&results=1&seed=abc";
