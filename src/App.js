@@ -24,7 +24,7 @@ export function App() {
           <Loader />
         </div>
       ) : (
-        <div class="flex min-h-screen items-center justify-center">
+        <div class="flex min-h-screen items-center justify-center bg-[#153448]">
           <div class="relative flex w-full max-w-[48rem] flex-row rounded-xl bg-white bg-clip-border text-gray-700 shadow-lg">
             <div class="relative w-[28%] p-4 flex items-center justify-center shrink-0 overflow-hidden rounded-xl   bg-white bg-clip-border text-gray-700">
               <img
