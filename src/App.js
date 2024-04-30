@@ -19,25 +19,23 @@ export function App() {
 
   return (
     <>
-      {isLoader ? (
-        <div className="flex items-center justify-center h-screen">
+      <div className="flex h-screen items-center justify-center bg-[#153448]">
+        {isLoader ? (
           <Loader />
-        </div>
-      ) : (
-        <div class="flex min-h-screen items-center justify-center bg-[#153448]">
-          <div class="relative flex w-full max-w-[48rem] flex-row rounded-xl bg-white bg-clip-border text-gray-700 shadow-lg">
-            <div class="relative w-[28%] p-4 flex items-center justify-center shrink-0 overflow-hidden rounded-xl   bg-white bg-clip-border text-gray-700">
+        ) : (
+          <div class="flex w-full max-w-[48rem] flex-row rounded-xl bg-white bg-clip-border text-gray-700 shadow-lg">
+            <div class="flex w-[28%] shrink-0 items-center justify-center overflow-hidden rounded-xl bg-white   bg-clip-border p-4 text-gray-700">
               <img
                 src={profile.picture.large}
                 alt="image"
-                class="w-full object-cover rounded-2xl bg-center"
+                class="w-full rounded-2xl bg-center object-cover"
               />
             </div>
             <div class="p-6">
-              <h6 class="mb-1 block font-sans font-semibold uppercase leading-relaxed tracking-normal text-pink-500 antialiased text-2xl">
+              <h6 class="mb-1 block font-sans text-2xl font-semibold uppercase leading-relaxed tracking-normal text-pink-500 antialiased">
                 {profile.name.title} {profile.name.first} {profile.name.last}
               </h6>
-              <h4 class="block font-sans text-md font-semibold leading-snug tracking-normal text-blue-gray-900 uppercase antialiased">
+              <h4 class="text-md text-blue-gray-900 block font-sans font-semibold uppercase leading-snug tracking-normal antialiased">
                 {profile.gender}, {profile.dob.age} years old
               </h4>
               <p class="block font-sans text-base font-normal leading-relaxed text-gray-700 antialiased">
@@ -50,12 +48,12 @@ export function App() {
                 {profile.location.country}
               </p>
               <a
-                class="inline-block mt-3"
+                class="mt-3 inline-block"
                 target="_blank"
                 href={`mailto:${profile.email}`}
               >
                 <button
-                  class="flex select-none items-center gap-2 rounded-lg py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-pink-500 transition-all bg-pink-500/10 hover:bg-pink-500/20 active:bg-pink-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                  class="flex select-none items-center gap-2 rounded-lg bg-pink-500/10 px-6 py-3 text-center align-middle font-sans text-xs font-bold uppercase text-pink-500 transition-all hover:bg-pink-500/20 active:bg-pink-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                   type="button"
                 >
                   Contact Me
@@ -78,8 +76,8 @@ export function App() {
               </a>
             </div>
           </div>
-        </div>
-      )}
+        )}
+      </div>
     </>
   );
 }
